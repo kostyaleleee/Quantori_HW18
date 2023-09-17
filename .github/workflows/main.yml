@@ -26,7 +26,8 @@ jobs:
           npm install -g newman-reporter-htmlextra
 
       - name: test run
-        run: newman run src/nameofcollection -r htmlextra
+        run: newman run src/Manokhin_HW18.json --folder lecture-3 --delay-request 200 -r htmlextra
+
 
       - name: checkout to gh-branches
         if: always()
