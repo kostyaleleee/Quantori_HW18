@@ -36,6 +36,14 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Rename report
+        if: always()
+        run: |
+          ls
+          pwd
+          cd newman
+          mv *.html index.html
+
       - name: Sending report to gh-pages
         if: always()
         uses: crazy-max/ghaction-github-pages@v3
